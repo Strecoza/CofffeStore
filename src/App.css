@@ -1,38 +1,416 @@
-.App {
-  text-align: center;
+/*
+=============== 
+Global
+===============
+*/
+html {
+  scroll-behavior: smooth;
+} 
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: hsl(209, 61%, 16%);
+  background-color: hsl(0, 3%, 93%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.7rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.95rem;
+}
+h5 {
+  font-size: 0.875rem;
+}
+h6 {
+  font-size: 0.8rem;
+}
+h2,h3, h4, h5, h6 {
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button {
+  margin: 10px;
+}
+
+/* section */
+.section {
+  margin: 0 auto;
+  max-width: 1170px ;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .section {
+    width: 95vw;
   }
 }
+/*
+=============== 
+Navigation
+===============
+*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
   display: flex;
-  flex-direction: column;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background:  hsl(21, 27%, 73%);
+}
+
+.links{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  margin: 10px;
+}
+.link:hover{
+  color: hsl(21, 86%, 14%);
+  text-decoration: underline;
+  transition: all 0.5s ease;
+}
+.basket{
+  text-decoration: none;
+  color: black;
+  height: 2rem;
+  cursor: pointer;
+}
+.basket:hover, .basket:active{
+  color:  hsl(21, 86%, 14%);
+  scale: 2;
+  text-shadow:  1px 0 15px #fff;
+  transition: all 0.4s ease;
+}
+
+.logo:hover{
+  text-decoration: none;
+}
+
+/*
+=============== 
+Shop section
+===============
+*/
+
+.banner{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 1170px;
+  margin-bottom: 2rem;
+ }
+
+.banner-image{ 
+  background-size: cover;
+  width: 100vw;
+  max-width: 1170px;
+  max-height: 90vh;
+  margin-bottom: 0;
+}
+.banner-text{
+  position: absolute;
+  max-width: 500px;
+  min-width: 250px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 2rem;
+  right: 2rem;
+  left: 60%;
+  top: 20%;
+  color:#fff
+}
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: hsl(209, 34%, 30%);
+  text-shadow: 2px 3px 4px  hsl(21, 73%, 87%);
+}
+
+
+/* products */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.cont {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 2rem;
+}
+.filter_buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.filter {
+  background-color: hsl(21, 86%, 14%);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 0.25rem;
+}
+.filter:hover{
+  background-color:  hsl(21, 48%, 35%);
+}
+.col-md-3{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*==Product card==*/
+.card{
+  margin-bottom: 2rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  width: 18rem;
+}
+.card:hover{
+  transform: scale(1.05);
+  background-color: rgba(251, 251, 251, 0.15);
+}
+.card-img-top{
+  height: 60%;
+  border-radius: 0.25rem 0.25rem 0 0;
+  margin-bottom: 10px;
+}
+.btn-primary{
+  background-color: hsl(21, 86%, 14%);
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover, .btn-primary:active{
+  background-color:  hsl(21, 48%, 35%);
+}
+
+/*
+=============== 
+Review section
+===============
+/*Slider*/
+
+.review {
+  margin-top: 2rem;
+} 
+
+.section-center {
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 80vw;
+  height: 450px;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.person-img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid  hsl(21, 62%, 45%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.name{
+  color: hsl(21, 62%, 45%);
+  text-transform: uppercase;
+}
+
+.text {
+  max-width: 35em;
+  margin: 0 auto;
+  margin-top: 2rem;
+  line-height: 2;
+  color: hsl(210, 22%, 49%);
+}
+.icon {
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: hsl(210, 22%, 49%);
+}
+.prev,
+.next {
+  position: absolute;
+  top: 200px;
+  transform: translateY(-50%);
+  background: hsl(210, 22%, 49%);
+  color: #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.prev:hover,
+.next:hover {
+  background: hsl(21, 62%, 45%);
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+article.lastSlide {
+  transform: translateX(-100%);
+}
+article.nextSlide {
+  transform: translateX(100%);
+}
+
+@media (min-width: 800px) {
+  .text {
+    max-width: 45em;
   }
-  to {
-    transform: rotate(360deg);
+  .prev,
+  .next {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1, h2, h3, h4 {
+    line-height: 2;
+  }
+}
+
+@media (max-width: 756px){
+  nav{
+    padding: 10px;
+  }
+  .cont {
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .cont_buttons{
+    display:flex;
+    flex-direction: column;
+  }
+  .filter_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .filter {
+    background-color: hsl(21, 86%, 14%);
+    color: #fff;
+    padding: 2px;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 12px;
+  }
+  .basket{
+    height: 1rem;
+  }
+}
+
+@media (max-width: 680px){
+  h1 {
+    font-size: 2rem;
+  }
+  nav{
+    padding: 10px auto;
+  }
+  .link{
+    font-size: 12px;
+  }
+  .banner-text{
+    font-size: 12px;
+    min-width: 100px;
+    left: 60%;
+    letter-spacing: 1px;
+    line-height: 1rem;
+    right: .5rem;
+  }
+  .products{
+    padding: 10px auto;
+  }
+  .col-md-3{
+    margin: 5px auto;
+  }
+}
+
+@media (max-width: 450px){
+  .logo{
+    display: none;
+  }
+  nav{
+    justify-content: space-around; 
+    width: 100vw;
+    padding: .5rem 1rem;
+  }
+}
+
+@media(max-width: 350px){
+  .link{
+    font-size: 11px;
+    margin: 0 10px 0 0;
   }
 }

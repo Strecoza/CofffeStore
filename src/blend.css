@@ -1,0 +1,210 @@
+.blendContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1170px ;
+}
+
+.blendName{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: hsl(21, 62%, 45%);
+    margin: 2rem auto 1.5rem auto;
+}
+
+.blendTitle {
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: hsl(209, 34%, 30%);
+    text-shadow: 2px 3px 4px  hsl(21, 73%, 87%);
+    margin: 3rem auto 2rem auto;
+    font-size: 2.5rem;
+  }
+
+.containerBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 800px ;
+    margin: 0 auto 2rem auto;
+}
+.leftBlock{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 60%;
+}
+.rightBlock{
+    display:flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 40%; 
+}
+.blendImage{
+    display: flex;
+}
+.imageBlend{
+    max-width: 500px;
+    min-width: 200px;
+    max-height: 500px;
+    border-radius: 0.25rem;
+}
+.blendSource{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+    color: hsl(210, 22%, 49%);
+}
+
+.blendDescription{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 1rem;
+    color: hsl(209, 27%, 38%);
+    min-height: 250px;
+    min-width: 200px;
+    line-height: 2;
+    padding-left: 1rem;
+}
+
+.Delete{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btnBlend{
+    background-color: hsl(21, 86%, 14%);
+    color: hsl(0, 3%, 93%);
+    padding: 5px;
+    border: none;
+    border-radius: 0.25rem;
+    min-width: 200px;
+    line-height: 2;
+    margin: 0;
+}
+.btnBlend:hover{
+    background-color:  hsl(21, 48%, 35%);
+    color: hsl(209, 61%, 16%);
+}
+
+.showMore{
+    background-color: hsl(0, 3%, 93%);
+    border: none;
+    text-decoration: underline;
+    font-size: 15px;
+    color: hsl(209, 61%, 16%);
+}
+
+.showMore:hover{
+    text-decoration: none;
+    color: hsl(209, 33%, 35%);
+}
+
+
+@media (max-width: 800px){
+    .blendTitle {
+        margin: 2rem auto 1rem auto;
+        font-size: 2rem;
+      }
+    h1 {
+        font-size: 4rem;
+    }
+    .containerBlock{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 450px;
+        width: 90vw;
+    }
+    
+    .rightBlock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+    }
+    .imageBlend{
+        max-width: 500px;
+        min-width: 250px;
+        border-radius: 0.25rem;
+    }
+    .blendDescription{
+        display: flex;
+        justify-content: center;
+        font-size:14px;
+        max-width: 450px;
+        min-width: 250px;
+        min-height: 100px;
+        line-height: 1.5;
+        padding:0;
+        margin: 0;
+    }
+    .showMore{
+        font-size: 12px;
+    }
+    .btnBlend{   
+        min-width: 100px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 450px){
+    .blendTitle {
+        margin: 1.5rem auto .8rem auto;
+        font-size: 1.5rem;
+      }
+ 
+    .blendName{
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin: 1rem auto .5rem auto;
+    }
+    .containerBlock{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        width: 95vw;
+    }
+    .leftBlock{
+        max-width: 100%;
+        padding: 0 auto;
+    }
+    .rightBlock{
+     margin: 5px auto;
+    }
+    .imageBlend{
+        max-width: 400px;
+        min-width: 250px;
+        margin: 0 auto;
+    }
+    .blendDescription{
+        display: flex;
+        justify-content: center;
+        font-size:14px;
+        max-width: 450px;
+        min-width: 250px;
+        min-height: 100px;
+        line-height: 1.5;
+        padding:0;
+        margin: 0;
+    }
+
+    .btnBlend{   
+        min-width: 100px;
+        line-height: 1.5;
+    }
+}
