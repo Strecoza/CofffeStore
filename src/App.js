@@ -16,6 +16,7 @@ import BeansValues from './BeansValues';
 import About from './About';
 import Review from './Review';
 import Basket from './Basket';
+import Shop from './Shop';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
         <nav>
           <Link className='link logo' to = '/' ><CiCoffeeBean/>Co.Beans</Link>
           <div className='links'>
-            <Link className='link' to = '/'>Shop</Link>
+            <Link className='link' to = '/shop'>Shop</Link>
             <Link className='link' to = '/about'>About</Link>
             <Link className='link' to = '/beansvalues'>Beans values</Link>
             <Link className='link' to = '/review'>Review</Link>
@@ -35,6 +36,7 @@ function App() {
     
       <Routes>
         <Route path = '/' element = {<Home/>}/>
+        <Route path = '/shop' element = {<Shop/>}/>
         <Route path = '/review' element = {<Review/>} />
         <Route path ='/about' element = {<About/>}/>
         <Route path = '/beansvalues' element ={<BeansValues/>} />

@@ -93,7 +93,7 @@ export const data = [
     },
     {
       id: 14,
-      itemName: "Hot cacao",
+      itemName: "Hot cocoa",
       searchTerm: "drink",
       price: 6.25,
       image: "https://images.unsplash.com/photo-1611502693157-ba4097288145?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTEwfHxtb2NoYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
@@ -128,7 +128,7 @@ export const data = [
     },
     {
       id: 19,
-      itemName: "Egg+avocado sandwich",
+      itemName: "Egg + avocado sandwich",
       searchTerm: "food",
       price: 12.99,
       image: "https://images.unsplash.com/photo-1525351326368-efbb5cb6814d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDU3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=700&q=60"
