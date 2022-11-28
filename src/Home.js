@@ -1,11 +1,14 @@
 import React,{useState}  from 'react';
 
+import './App.css';
+
 import {data} from './Data';
 import Products from './Products';
 import Buttons from './Buttons';
 import ButtonAll from './ButtonAll';
-
-import './App.css';
+import About from './About';
+import BeansValues from './BeansValues';
+import Review from './Review';
 
 function Home() {
   const [products, setProducts]= useState(data);
@@ -17,26 +20,35 @@ function Home() {
   }
 
   return (
-    <section className='section'>
-      <div className='banner'>
-        <img className='banner-image' src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDExMnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt='Coffee time'/>
-          <h3 className='banner-text'>Take your time. <br/> <br/>Enjoy!</h3>
-      </div>
-      <div>
-        <h2 className = 'title'> Free Standart Shipping</h2>
-      </div>
-      <div className='cont'>
-        <div >
-          <Buttons filteredProducts = {chosenProducts}/>
+    <div>
+      <section className='section'>
+        <div className='banner'>
+          <img className='banner-image' src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDExMnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt='Coffee time'/>
+            <h3 className='banner-text'>Take your time. <br/> <br/>Enjoy!</h3>
         </div>
         <div>
-          <ButtonAll allData= {allProducts}/>
-        </div> 
-      </div>
-
-        <Products itemForSale= {products}/>
-     
-    </section>
+          <h2 className = 'title'> Free Standart Shipping</h2>
+        </div>
+        <div className='cont'>
+          <div >
+            <Buttons filteredProducts = {chosenProducts}/>
+          </div>
+          <div>
+            <ButtonAll allData= {allProducts}/>
+          </div> 
+        </div>
+          <Products itemForSale= {products}/>
+      </section>
+      <section className='section'>
+        <About/>
+      </section>
+      <section className='section'>
+        <BeansValues/>
+      </section>
+      <section className='section'>
+        <Review/>
+      </section>
+    </div>
   );
 }
 

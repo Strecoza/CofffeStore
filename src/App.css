@@ -5,6 +5,7 @@ Global
 */
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 } 
 
 body {
@@ -48,7 +49,7 @@ button {
 
 /* section */
 .section {
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   max-width: 1170px ;
   justify-content: center;
 }
@@ -211,6 +212,64 @@ Shop section
 .btn-primary:hover, .btn-primary:active{
   background-color:  hsl(21, 48%, 35%);
 }
+/*
+=============== 
+About section
+===============
+*/
+.about{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1170px;
+  min-width: 300px;
+  min-height: 500px;
+  width: 100vw;
+  padding: 0 auto;
+  background-color: hsl(21, 86%, 14%);
+}
+
+.about-coffee{
+  width: 100%;
+  max-width: 1170px;
+  min-width: 270px;
+  min-height: 300px;
+  opacity: .7;
+}
+
+.about-story{
+  position: absolute;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  min-height: 250px;
+}
+
+.about-title{
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color:  hsl(21, 73%, 87%);
+  text-shadow:  hsl(209, 34%, 30%) 2px 3px 4px ;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.about-text{
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 5px;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+}
+
 
 /*
 =============== 
@@ -219,14 +278,14 @@ Review section
 /*Slider*/
 
 .review {
-  margin-top: 2rem;
+  margin-top: 3rem;
 } 
 
 .section-center {
   margin: 0 auto;
   margin-top: 4rem;
   width: 80vw;
-  height: 450px;
+  min-height: 450px;
   max-width: 800px;
   text-align: center;
   position: relative;
@@ -337,6 +396,17 @@ article.nextSlide {
   h1, h2, h3, h4 {
     line-height: 2;
   }
+  .about-story{
+    top: 12%;
+    transition: all 0.7s ease;
+  }
+  .about-title{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .about-text{
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 756px){
@@ -347,28 +417,36 @@ article.nextSlide {
     display:flex;
     flex-direction: column;
     margin: 0 auto;
+    transition: all 0.4s ease;
   }
   .cont_buttons{
     display:flex;
     flex-direction: column;
+    transition: all 0.4s ease;
   }
   .filter_buttons{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s ease;
   }
   .filter {
     background-color: hsl(21, 86%, 14%);
     color: #fff;
     padding: 2px;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 5px;
     font-size: 12px;
+    width: 120px;
   }
   .basket{
     height: 1rem;
   }
+  .about{
+    min-height: 100px;
+  }
+ 
 }
 
 @media (max-width: 680px){
@@ -388,12 +466,24 @@ article.nextSlide {
     letter-spacing: 1px;
     line-height: 1rem;
     right: .5rem;
+    transition: all 0.4s ease;
   }
   .products{
     padding: 10px auto;
   }
   .col-md-3{
     margin: 5px auto;
+  }
+}
+@media (max-width: 560px){
+  .about-title{
+    font-size: .9rem;
+    margin-bottom: 7px;
+    transition: all 0.4s ease;
+  }
+  .about-text{
+    font-size: .7rem;
+    transition: all 0.4s ease;
   }
 }
 
@@ -405,6 +495,7 @@ article.nextSlide {
     justify-content: space-around; 
     width: 100vw;
     padding: .5rem 1rem;
+    transition: all 0.4s ease;
   }
 }
 
@@ -412,5 +503,12 @@ article.nextSlide {
   .link{
     font-size: 11px;
     margin: 0 10px 0 0;
+  }
+  .about-story{
+    top: 5%;
+    transition: all 0.4s ease;
+  }
+  .about-title{
+    margin-bottom: 5px;
   }
 }

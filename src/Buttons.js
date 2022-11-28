@@ -8,7 +8,7 @@ function Buttons({filteredProducts}){
                 <button className="filter" onClick = {() => filteredProducts("coffee")}>Coffee beans</button>
             </div>
             <div>
-                <button className="filter" onClick = {() => filteredProducts("cocoa")}>Cacao beans</button>
+                <button className="filter" onClick = {() => filteredProducts("cocoa")}>Cocoa beans</button>
             </div>
             <div>
                 <button className="filter" onClick = {() => filteredProducts("dessert")}>Desserts</button>
