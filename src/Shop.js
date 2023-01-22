@@ -2,7 +2,7 @@ import React,{useState}  from 'react';
 
 import './App.css';
 
-import {data} from './Data';
+import {data} from './data';
 import Products from './Products';
 import Buttons from './Buttons';
 import ButtonAll from './ButtonAll';

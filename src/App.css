@@ -99,7 +99,7 @@ nav{
 }
 .basket:hover, .basket:active{
   color:  hsl(21, 86%, 14%);
-  scale: 2;
+  scale: 1.4;
   text-shadow:  1px 0 15px #fff;
   transition: all 0.4s ease;
 }
@@ -211,6 +211,226 @@ Shop section
 }
 .btn-primary:hover, .btn-primary:active{
   background-color:  hsl(21, 48%, 35%);
+}
+
+/*
+=============== 
+Catering section
+===============
+*/
+.addMeal{
+  width: 100vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.addMealContainer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10 auto;
+  max-width: 1170px;
+  min-width: 300px;
+  min-height: 200px;
+  padding: 0;
+}
+
+.addMealContainer video{
+  max-width: 1170px;
+  max-height: 900px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  object-fit: cover;
+  position: absolute;
+  left:0;
+  z-index: -5;
+}
+
+.searchTitle{
+  margin-top: 4rem;
+  position: relative;
+  z-index: 0;
+}
+
+.searchMeal{
+  display: flex;
+  flex-direction: row;
+}
+.search{
+  width: 100%;
+  margin: 10px 0 10px 0;
+  padding: 12px 24px;
+  background-color:  rgba(205, 181, 168, 0.6);
+  line-height: 18px;
+  color: hsl(21, 86%, 14%);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 0;
+  box-shadow: inset 0px 0px 0px 4px rgba(205, 181, 168, 0.6);
+  border-radius: 0.25rem;
+}
+
+.search::placeholder {
+  color:hsl(20, 24%, 26%);
+}
+
+.search:hover{
+  border:hsl(21, 88%, 9%) solid 2px;
+  outline: none;
+  background-color:  rgba(186, 163, 151, 0.6);
+}
+
+.search:focus{
+  color:hsl(21, 88%, 9%);
+  outline: none;
+}
+
+.mealCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+
+  margin-bottom: 0.7rem;
+  border-radius: 0.25rem;
+}
+
+.mealContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(205, 181, 168, 0.5);
+  color:hsl(21, 88%, 9%)
+}
+
+.mealLabel{
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-decoration: underline double;
+  line-height: 2;
+  text-shadow: 0 0 1px rgba(255,255,255,.5); 
+}
+
+ul {
+  text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+li {
+  display: block;
+  margin: .1em auto;
+  color: hsl(21, 88%, 9%);
+}
+
+.mealImg{
+  width: 250px;
+  border: hsl(21, 88%, 9%) solid 2px;
+  border-radius: 0.25rem;
+}
+
+.calories{
+ font-size: medium;
+ color: hsl(21, 88%, 9%);
+ text-decoration: underline;
+ letter-spacing: 1.5px;
+}
+
+/*MealCard Slider*/
+
+.review {
+  margin-top: 3rem;
+} 
+
+.section-center {
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 80vw;
+  min-height: 450px;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.person-img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid  hsl(21, 62%, 45%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.name{
+  color: hsl(21, 62%, 45%);
+  text-transform: uppercase;
+}
+
+.text {
+  max-width: 35em;
+  margin: 0 auto;
+  margin-top: 2rem;
+  line-height: 2;
+  color: hsl(210, 22%, 49%);
+}
+.icon {
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: hsl(210, 22%, 49%);
+}
+.prev,
+.next {
+  position: absolute;
+  top: 200px;
+  transform: translateY(-50%);
+  background: hsl(210, 22%, 49%);
+  color: #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.prev:hover,
+.next:hover {
+  background: hsl(21, 62%, 45%);
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+article.lastSlide {
+  transform: translateX(-100%);
+}
+article.nextSlide {
+  transform: translateX(100%);
 }
 /*
 =============== 

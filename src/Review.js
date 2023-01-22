@@ -1,9 +1,8 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
-import { FaQuoteRight} from 'react-icons/fa';
 import { FiChevronLeft, FiChevronRight} from 'react-icons/fi';
 
-import {reviewData} from './ReviewData';
+import {reviewData} from './reviewdata';
 
 import './App.css';
 
@@ -11,6 +10,18 @@ import './App.css';
 function Review(){
     const [people, setPeople] = useState(reviewData);
     const [currentIndex, setcurrentIndex] = useState(0);
+
+/*
+useEffect(() => {
+    const lastIndex= people.length-1;
+    if (currentIndex<0){
+        setcurrentIndex(lastIndex)
+    }
+    if (currentIndex>lastIndex){
+        setcurrentIndex(0)
+    }
+}, [currentIndex])
+ */ 
 
  const previousReview = () => {
     setcurrentIndex((currentIndex =>{
@@ -30,13 +41,13 @@ function Review(){
         return currentIndex;
     }))
  }
-   
+
  useEffect(() => {
-    let slider = setInterval(() => setcurrentIndex(prevState => prevState + 1), 4000);
+    let slider = setInterval(() => setcurrentIndex(nextReview => nextReview + 1), 4000);
     return () => {
-        clearInterval (slider);
+        clearInterval (slider);   
     }
- }, [currentIndex])
+ }, [reviewData.length-1]);
  
 return (
     <section className='section'>
@@ -60,7 +71,6 @@ return (
                         <img className = 'person-img' src= {image} alt = 'person' width = '250px' height = '350px'/>
                         <h3 className = 'name'>{personName}</h3>
                         <p className='text'>{reviewText}</p>
-                        <FaQuoteRight className='icon'/>
                     </article>
                 )
             })}

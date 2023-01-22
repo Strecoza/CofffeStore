@@ -4,6 +4,7 @@ import './App.css';
 
 
 import Shop from './Shop';
+import Catering from './Catering';
 import About from './About';
 import BeansValues from './BeansValues';
 import Review from './Review';
@@ -19,6 +20,9 @@ function Home() {
       </section>
       <section className='section'>
           <Shop/>
+      </section>
+      <section className='section'>
+          <Catering/>
       </section>
       <section className='section'>
         <About/>

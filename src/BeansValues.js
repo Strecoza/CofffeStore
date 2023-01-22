@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {blendData} from './BlendData';
+import {blendData} from './beansdata';
 import './blend.css';
 
 function BeansValues(){
