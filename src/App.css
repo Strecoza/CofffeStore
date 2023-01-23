@@ -229,7 +229,7 @@ Catering section
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10 auto;
+  margin:0 auto;
   max-width: 1170px;
   min-width: 300px;
   min-height: 200px;
@@ -238,7 +238,7 @@ Catering section
 
 .addMealContainer video{
   max-width: 1170px;
-  max-height: 900px;
+  max-height: 1000px;
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
@@ -249,7 +249,7 @@ Catering section
 }
 
 .searchTitle{
-  margin-top: 4rem;
+  margin-top: 3rem;
   position: relative;
   z-index: 0;
 }
@@ -292,9 +292,8 @@ Catering section
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 600px;
-
-  margin-bottom: 0.7rem;
+  width: 800px;
+  margin-bottom: 0.5rem;
   border-radius: 0.25rem;
 }
 
@@ -329,7 +328,7 @@ li {
 }
 
 .mealImg{
-  width: 250px;
+  width: 200px;
   border: hsl(21, 88%, 9%) solid 2px;
   border-radius: 0.25rem;
 }

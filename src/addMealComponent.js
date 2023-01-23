@@ -10,8 +10,8 @@ function AddMealComponent ({label, image, calories, ingredients}){
             </div>
             <div className ="mealContainer">
                     <ul>
-                        {ingredients.map(ingredient => (
-                            <li>{ingredient} </li>
+                        {ingredients.map((ingredient,index) => (
+                            <li key ={index}>{ingredient} </li>
                         ))}
                     </ul>
                     

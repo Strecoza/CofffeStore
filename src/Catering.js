@@ -49,8 +49,8 @@ function Catering(){
                 </div>
             </div>
             <div className="addMealContainer">
-                {myRecipes.map(element=>(
-                    <AddMealComponent
+                {myRecipes.map((element,index)=>(
+                    <AddMealComponent key={index}
                         label={element.recipe.label}
                         image={element.recipe.image}
                         calories={element.recipe.calories}
