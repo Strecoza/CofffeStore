@@ -18,7 +18,7 @@ import About from './About';
 import Review from './Review';
 import Basket from './Basket';
 import Shop from './Shop';
-
+import Footer from "./Footer";
 
 function App() {
  return(
@@ -46,6 +46,7 @@ function App() {
         <Route path = '/basket' element ={<Basket/>} />
       </Routes>
     </Router>
+    <Footer/>
   </header>
  );
 }
